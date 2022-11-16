@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useSelector, useDispatch } from "react-redux";
-import { toast } from "react-toastify";
-import { useHistory } from "react-router-dom";
+// import { toast } from "react-toastify";
+// import { useHistory } from "react-router-dom";
 
 export const NF = (n: string | number) =>
   String(n).replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
@@ -50,6 +50,7 @@ declare interface StoreObject {
   theme: string;
   cookie?: string;
   loading: boolean;
+  list: string;
 }
 const appKey = "myProject-v.1.10";
 
@@ -91,6 +92,7 @@ const initialState: StoreObject = {
   lang: "en-US",
   cookie: "",
   loading: false,
+  list: "Male",
 };
 
 export const slice = createSlice({

@@ -1,31 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.scss";
-import useStore from "./useStore";
+// import useStore from "./useStore";
+
+import List from "./pages/list";
+import Content from "./pages/content";
 
 function App() {
-  const { theme, update } = useStore();
-
-  React.useEffect(() => {
-    update({ theme: "123231" });
-  }, []);
+  // const { theme, update } = useStore();
 
   return (
     <div className="App">
-      <header>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List />
+      <Content />
     </div>
   );
 }
